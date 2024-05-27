@@ -1,0 +1,17 @@
+/Users/angellollerena/Documents/Compiladores/bin/Debug/net8.0/Compiladores
+/Users/angellollerena/Documents/Compiladores/bin/Debug/net8.0/Compiladores.deps.json
+/Users/angellollerena/Documents/Compiladores/bin/Debug/net8.0/Compiladores.runtimeconfig.json
+/Users/angellollerena/Documents/Compiladores/bin/Debug/net8.0/Compiladores.dll
+/Users/angellollerena/Documents/Compiladores/bin/Debug/net8.0/Compiladores.pdb
+/Users/angellollerena/Documents/Compiladores/bin/Debug/net8.0/Antlr4.Runtime.Standard.dll
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.csproj.AssemblyReference.cache
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.GeneratedMSBuildEditorConfig.editorconfig
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.AssemblyInfoInputs.cache
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.AssemblyInfo.cs
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.csproj.CoreCompileInputs.cache
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compilad.97AE351D.Up2Date
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.dll
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/refint/Compiladores.dll
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.pdb
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.genruntimeconfig.cache
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/ref/Compiladores.dll
