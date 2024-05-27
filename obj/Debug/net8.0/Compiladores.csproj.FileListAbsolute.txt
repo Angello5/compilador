@@ -15,3 +15,4 @@
 /Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.pdb
 /Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.genruntimeconfig.cache
 /Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/ref/Compiladores.dll
+/Users/angellollerena/Documents/Compiladores/obj/Debug/net8.0/Compiladores.sourcelink.json

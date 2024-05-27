@@ -156,4 +156,10 @@ public interface IGamecsharpVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitValue([NotNull] GamecsharpParser.ValueContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GamecsharpParser.printStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitPrintStatement([NotNull] GamecsharpParser.PrintStatementContext context);
 }

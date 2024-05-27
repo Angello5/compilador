@@ -27,6 +27,7 @@ command:
     | ifStatement
     | whileStatement
     | functionCall
+    | printStatement
     ;
 
 // Asignación y expresiones
@@ -50,6 +51,8 @@ exprList: expr (',' expr)* ;
 // Valores
 value: STRING | NUMBER | 'true' | 'false' | ID ;
 
+//Imprimir en consola 
+printStatement: 'print' '(' expr ')' ';' ;
 // Tokens
 ID     : [a-zA-Z_][a-zA-Z0-9_]* ; // Identificadores
 NUMBER : [0-9]+ ;                 // Números enteros
