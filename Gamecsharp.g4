@@ -10,16 +10,16 @@ statement:
     ;
 
 // Declaración de objetos  personajes
-objectDecl: 'object' ID '{' objectBody '}' ;
+objectDecl: 'objeto' ID '{' objectBody '}' ;
 objectBody: (propertyDecl ';')* ;
-propertyDecl: 'property' ID '=' value ;
+propertyDecl: 'propiedad' ID '=' value ;
 
 // Manejo de eventos como clics o teclado
-eventHandler: 'on' eventType '{' command* '}' ;
-eventType: 'click' | 'keydown' | 'keyup' | 'mousemove' ;
+eventHandler: 'en' eventType '{' command* '}' ;
+eventType: 'click' | 'teclaAbajo' | 'teclaArriba' | 'movimientoRaton' ;
 
 // Acciones definidas por el usuario
-actionDecl: 'action' ID '{' command* '}' ;
+actionDecl: 'accion' ID '{' command* '}' ;
 
 // Comandos dentro de acciones  de eventos
 command: 
@@ -41,18 +41,18 @@ expr:
     ;
 
 // Estructuras de control de flujo
-ifStatement: 'if' '(' expr ')' '{' command* '}' ;
-whileStatement: 'while' '(' expr ')' '{' command* '}' ;
+ifStatement: 'si' '(' expr ')' '{' command* '}' ;
+whileStatement: 'mientras' '(' expr ')' '{' command* '}' ;
 
 // Llamadas a funciones predefinidas
 functionCall: ID '(' exprList ')' ';' ;
 exprList: expr (',' expr)* ;
 
 // Valores
-value: STRING | NUMBER | 'true' | 'false' | ID ;
+value: STRING | NUMBER | 'verdadero' | 'falso' | ID ;
 
 //Imprimir en consola 
-printStatement: 'print' '(' expr ')' ';' ;
+printStatement: 'imprimir' '(' expr ')' ';' ;
 // Tokens
 ID     : [a-zA-Z_][a-zA-Z0-9_]* ; // Identificadores
 NUMBER : [0-9]+ ;                 // Números enteros

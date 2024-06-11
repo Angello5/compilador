@@ -1,4 +1,4 @@
-// Generated from /Users/angellollerena/Documents/Compiladores/Gamecsharp.g4 by ANTLR 4.13.1
+// Generated from d:/compilador/Gamecsharp.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -37,9 +37,10 @@ public class GamecsharpParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'object'", "'{'", "'}'", "';'", "'property'", "'='", "'on'", "'click'", 
-			"'keydown'", "'keyup'", "'mousemove'", "'action'", "'*'", "'/'", "'+'", 
-			"'-'", "'('", "')'", "'if'", "'while'", "','", "'true'", "'false'", "'print'"
+			null, "'objeto'", "'{'", "'}'", "';'", "'propiedad'", "'='", "'en'", 
+			"'click'", "'teclaAbajo'", "'teclaArriba'", "'movimientoRaton'", "'accion'", 
+			"'*'", "'/'", "'+'", "'-'", "'('", "')'", "'si'", "'mientras'", "','", 
+			"'verdadero'", "'falso'", "'imprimir'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/angellollerena/Documents/compiladores-trabajofinal/ConsoleApp1/ConsoleApp1.csproj": {}
+    "D:\\compilador\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "/Users/angellollerena/Documents/compiladores-trabajofinal/ConsoleApp1/ConsoleApp1.csproj": {
+    "D:\\compilador\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/angellollerena/Documents/compiladores-trabajofinal/ConsoleApp1/ConsoleApp1.csproj",
+        "projectUniqueName": "D:\\compilador\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "/Users/angellollerena/Documents/compiladores-trabajofinal/ConsoleApp1/ConsoleApp1.csproj",
-        "packagesPath": "/Users/angellollerena/.nuget/packages/",
-        "outputPath": "/Users/angellollerena/Documents/compiladores-trabajofinal/ConsoleApp1/obj/",
+        "projectPath": "D:\\compilador\\ConsoleApp1\\ConsoleApp1.csproj",
+        "packagesPath": "C:\\Users\\bravo\\.nuget\\packages\\",
+        "outputPath": "D:\\compilador\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/angellollerena/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\bravo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
