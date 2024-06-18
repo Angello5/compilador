@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\compilador\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "/Users/angellollerena/Documents/GitHub/compilador/ConsoleApp1/ConsoleApp1.csproj": {}
   },
   "projects": {
-    "D:\\compilador\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "/Users/angellollerena/Documents/GitHub/compilador/ConsoleApp1/ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\compilador\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "/Users/angellollerena/Documents/GitHub/compilador/ConsoleApp1/ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "D:\\compilador\\ConsoleApp1\\ConsoleApp1.csproj",
-        "packagesPath": "C:\\Users\\bravo\\.nuget\\packages\\",
-        "outputPath": "D:\\compilador\\ConsoleApp1\\obj\\",
+        "projectPath": "/Users/angellollerena/Documents/GitHub/compilador/ConsoleApp1/ConsoleApp1.csproj",
+        "packagesPath": "/Users/angellollerena/.nuget/packages/",
+        "outputPath": "/Users/angellollerena/Documents/GitHub/compilador/ConsoleApp1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bravo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/angellollerena/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -42,6 +42,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Antlr4.Runtime.Standard": {
+              "target": "Package",
+              "version": "[4.13.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

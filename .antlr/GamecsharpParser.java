@@ -1,4 +1,4 @@
-// Generated from d:/compilador/Gamecsharp.g4 by ANTLR 4.13.1
+// Generated from /Users/angellollerena/Documents/GitHub/compilador/Gamecsharp.g4 by ANTLR 4.13.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;

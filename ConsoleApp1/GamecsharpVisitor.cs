@@ -30,13 +30,15 @@ using IToken = Antlr4.Runtime.IToken;
 /// <typeparam name="Result">The return type of the visit operation.</typeparam>
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.13.1")]
 [System.CLSCompliant(false)]
+#pragma warning disable CS3021 // Type or member does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute
 public interface IGamecsharpVisitor<Result> : IParseTreeVisitor<Result> {
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.prog"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitProg([NotNull] GamecsharpParser.ProgContext context);
+#pragma warning restore CS3021 // Type or member does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute
+    /// <summary>
+    /// Visit a parse tree produced by <see cref="GamecsharpParser.prog"/>.
+    /// </summary>
+    /// <param name="context">The parse tree.</param>
+    /// <return>The visitor result.</return>
+    Result VisitProg([NotNull] GamecsharpParser.ProgContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="GamecsharpParser.statement"/>.
 	/// </summary>

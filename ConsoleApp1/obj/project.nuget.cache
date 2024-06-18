@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ej2frpKkbD0=",
+  "dgSpecHash": "XRwQJgkgFTI=",
   "success": true,
-  "projectFilePath": "D:\\compilador\\ConsoleApp1\\ConsoleApp1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/angellollerena/Documents/GitHub/compilador/ConsoleApp1/ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "/Users/angellollerena/.nuget/packages/antlr4.runtime.standard/4.13.1/antlr4.runtime.standard.4.13.1.nupkg.sha512"
+  ],
   "logs": []
 }

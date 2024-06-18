@@ -32,8 +32,10 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.13.1")]
 [System.CLSCompliant(false)]
+#pragma warning disable CS3021 // Type or member does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute
 public partial class GamecsharpParser : Parser {
-	protected static DFA[] decisionToDFA;
+#pragma warning restore CS3021 // Type or member does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute
+    protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
@@ -53,9 +55,10 @@ public partial class GamecsharpParser : Parser {
 	};
 
 	private static readonly string[] _LiteralNames = {
-		null, "'object'", "'{'", "'}'", "';'", "'property'", "'='", "'on'", "'click'", 
-		"'keydown'", "'keyup'", "'mousemove'", "'action'", "'*'", "'/'", "'+'", 
-		"'-'", "'('", "')'", "'if'", "'while'", "','", "'true'", "'false'", "'print'"
+		null, "'objeto'", "'{'", "'}'", "';'", "'propiedad'", "'='", "'en'", "'click'", 
+		"'teclaAbajo'", "'teclaArriba'", "'movimientoRaton'", "'accion'", "'*'", 
+		"'/'", "'+'", "'-'", "'('", "')'", "'si'", "'mientras'", "','", "'verdadero'", 
+		"'falso'", "'imprimir'"
 	};
 	private static readonly string[] _SymbolicNames = {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
