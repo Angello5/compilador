@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from Gamecsharp.g4 by ANTLR 4.13.1
+// Generated from d:/compilador/GameSharp.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -25,7 +25,7 @@ using IToken = Antlr4.Runtime.IToken;
 using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 
 /// <summary>
-/// This class provides an empty implementation of <see cref="IGamecsharpVisitor{Result}"/>,
+/// This class provides an empty implementation of <see cref="IGameSharpVisitor{Result}"/>,
 /// which can be extended to create a visitor which only needs to handle a subset
 /// of the available methods.
 /// </summary>
@@ -33,9 +33,9 @@ using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.13.1")]
 [System.Diagnostics.DebuggerNonUserCode]
 [System.CLSCompliant(false)]
-public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IGamecsharpVisitor<Result> {
+public partial class GameSharpBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IGameSharpVisitor<Result> {
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.prog"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.prog"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -43,9 +43,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitProg([NotNull] GamecsharpParser.ProgContext context) { return VisitChildren(context); }
+	public virtual Result VisitProg([NotNull] GameSharpParser.ProgContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.statement"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.statement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -53,9 +53,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitStatement([NotNull] GamecsharpParser.StatementContext context) { return VisitChildren(context); }
+	public virtual Result VisitStatement([NotNull] GameSharpParser.StatementContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.objectDecl"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.objectDecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -63,9 +63,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitObjectDecl([NotNull] GamecsharpParser.ObjectDeclContext context) { return VisitChildren(context); }
+	public virtual Result VisitObjectDecl([NotNull] GameSharpParser.ObjectDeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.objectBody"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.objectBody"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -73,9 +73,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitObjectBody([NotNull] GamecsharpParser.ObjectBodyContext context) { return VisitChildren(context); }
+	public virtual Result VisitObjectBody([NotNull] GameSharpParser.ObjectBodyContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.propertyDecl"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.propertyDecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -83,9 +83,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPropertyDecl([NotNull] GamecsharpParser.PropertyDeclContext context) { return VisitChildren(context); }
+	public virtual Result VisitPropertyDecl([NotNull] GameSharpParser.PropertyDeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.eventHandler"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.eventHandler"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -93,9 +93,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEventHandler([NotNull] GamecsharpParser.EventHandlerContext context) { return VisitChildren(context); }
+	public virtual Result VisitEventHandler([NotNull] GameSharpParser.EventHandlerContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.eventType"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.eventType"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -103,9 +103,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEventType([NotNull] GamecsharpParser.EventTypeContext context) { return VisitChildren(context); }
+	public virtual Result VisitEventType([NotNull] GameSharpParser.EventTypeContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.actionDecl"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.actionDecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -113,9 +113,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitActionDecl([NotNull] GamecsharpParser.ActionDeclContext context) { return VisitChildren(context); }
+	public virtual Result VisitActionDecl([NotNull] GameSharpParser.ActionDeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.command"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.command"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -123,9 +123,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitCommand([NotNull] GamecsharpParser.CommandContext context) { return VisitChildren(context); }
+	public virtual Result VisitCommand([NotNull] GameSharpParser.CommandContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.assignment"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.assignment"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -133,10 +133,10 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAssignment([NotNull] GamecsharpParser.AssignmentContext context) { return VisitChildren(context); }
+	public virtual Result VisitAssignment([NotNull] GameSharpParser.AssignmentContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>Numero</c>
-	/// labeled alternative in <see cref="GamecsharpParser.expr"/>.
+	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -144,10 +144,10 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNumero([NotNull] GamecsharpParser.NumeroContext context) { return VisitChildren(context); }
+	public virtual Result VisitNumero([NotNull] GameSharpParser.NumeroContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>AddSub</c>
-	/// labeled alternative in <see cref="GamecsharpParser.expr"/>.
+	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -155,10 +155,10 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAddSub([NotNull] GamecsharpParser.AddSubContext context) { return VisitChildren(context); }
+	public virtual Result VisitAddSub([NotNull] GameSharpParser.AddSubContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>Parentesis</c>
-	/// labeled alternative in <see cref="GamecsharpParser.expr"/>.
+	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -166,10 +166,10 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitParentesis([NotNull] GamecsharpParser.ParentesisContext context) { return VisitChildren(context); }
+	public virtual Result VisitParentesis([NotNull] GameSharpParser.ParentesisContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>Identicador</c>
-	/// labeled alternative in <see cref="GamecsharpParser.expr"/>.
+	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -177,10 +177,10 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIdenticador([NotNull] GamecsharpParser.IdenticadorContext context) { return VisitChildren(context); }
+	public virtual Result VisitIdenticador([NotNull] GameSharpParser.IdenticadorContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by the <c>Multiplicacionydivision</c>
-	/// labeled alternative in <see cref="GamecsharpParser.expr"/>.
+	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -188,9 +188,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitMultiplicacionydivision([NotNull] GamecsharpParser.MultiplicacionydivisionContext context) { return VisitChildren(context); }
+	public virtual Result VisitMultiplicacionydivision([NotNull] GameSharpParser.MultiplicacionydivisionContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.ifStatement"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.ifStatement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -198,9 +198,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIfStatement([NotNull] GamecsharpParser.IfStatementContext context) { return VisitChildren(context); }
+	public virtual Result VisitIfStatement([NotNull] GameSharpParser.IfStatementContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.whileStatement"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.whileStatement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -208,9 +208,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitWhileStatement([NotNull] GamecsharpParser.WhileStatementContext context) { return VisitChildren(context); }
+	public virtual Result VisitWhileStatement([NotNull] GameSharpParser.WhileStatementContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.functionCall"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.functionCall"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -218,9 +218,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFunctionCall([NotNull] GamecsharpParser.FunctionCallContext context) { return VisitChildren(context); }
+	public virtual Result VisitFunctionCall([NotNull] GameSharpParser.FunctionCallContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.exprList"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.exprList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -228,9 +228,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitExprList([NotNull] GamecsharpParser.ExprListContext context) { return VisitChildren(context); }
+	public virtual Result VisitExprList([NotNull] GameSharpParser.ExprListContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.value"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.value"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -238,9 +238,9 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitValue([NotNull] GamecsharpParser.ValueContext context) { return VisitChildren(context); }
+	public virtual Result VisitValue([NotNull] GameSharpParser.ValueContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GamecsharpParser.printStatement"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.printStatement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -248,5 +248,5 @@ public partial class GamecsharpBaseVisitor<Result> : AbstractParseTreeVisitor<Re
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitPrintStatement([NotNull] GamecsharpParser.PrintStatementContext context) { return VisitChildren(context); }
+	public virtual Result VisitPrintStatement([NotNull] GameSharpParser.PrintStatementContext context) { return VisitChildren(context); }
 }

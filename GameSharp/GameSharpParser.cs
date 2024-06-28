@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from Gamecsharp.g4 by ANTLR 4.13.1
+// Generated from d:/compilador/GameSharp.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -32,10 +32,8 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.13.1")]
 [System.CLSCompliant(false)]
-#pragma warning disable CS3021 // Type or member does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute
-public partial class GamecsharpParser : Parser {
-#pragma warning restore CS3021 // Type or member does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute
-    protected static DFA[] decisionToDFA;
+public partial class GameSharpParser : Parser {
+	protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
@@ -76,22 +74,22 @@ public partial class GamecsharpParser : Parser {
 		}
 	}
 
-	public override string GrammarFileName { get { return "Gamecsharp.g4"; } }
+	public override string GrammarFileName { get { return "GameSharp.g4"; } }
 
 	public override string[] RuleNames { get { return ruleNames; } }
 
 	public override int[] SerializedAtn { get { return _serializedATN; } }
 
-	static GamecsharpParser() {
+	static GameSharpParser() {
 		decisionToDFA = new DFA[_ATN.NumberOfDecisions];
 		for (int i = 0; i < _ATN.NumberOfDecisions; i++) {
 			decisionToDFA[i] = new DFA(_ATN.GetDecisionState(i), i);
 		}
 	}
 
-		public GamecsharpParser(ITokenStream input) : this(input, Console.Out, Console.Error) { }
+		public GameSharpParser(ITokenStream input) : this(input, Console.Out, Console.Error) { }
 
-		public GamecsharpParser(ITokenStream input, TextWriter output, TextWriter errorOutput)
+		public GameSharpParser(ITokenStream input, TextWriter output, TextWriter errorOutput)
 		: base(input, output, errorOutput)
 	{
 		Interpreter = new ParserATNSimulator(this, _ATN, decisionToDFA, sharedContextCache);
@@ -111,7 +109,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_prog; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitProg(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -172,7 +170,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_statement; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitStatement(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -233,7 +231,7 @@ public partial class GamecsharpParser : Parser {
 	}
 
 	public partial class ObjectDeclContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GamecsharpParser.ID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ObjectBodyContext objectBody() {
 			return GetRuleContext<ObjectBodyContext>(0);
 		}
@@ -244,7 +242,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_objectDecl; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitObjectDecl(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -294,7 +292,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_objectBody; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitObjectBody(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -338,7 +336,7 @@ public partial class GamecsharpParser : Parser {
 	}
 
 	public partial class PropertyDeclContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GamecsharpParser.ID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ValueContext value() {
 			return GetRuleContext<ValueContext>(0);
 		}
@@ -349,7 +347,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_propertyDecl; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPropertyDecl(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -400,7 +398,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_eventHandler; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEventHandler(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -457,7 +455,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_eventType; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEventType(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -494,7 +492,7 @@ public partial class GamecsharpParser : Parser {
 	}
 
 	public partial class ActionDeclContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GamecsharpParser.ID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public CommandContext[] command() {
 			return GetRuleContexts<CommandContext>();
 		}
@@ -508,7 +506,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_actionDecl; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitActionDecl(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -580,7 +578,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_command; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitCommand(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -643,7 +641,7 @@ public partial class GamecsharpParser : Parser {
 	}
 
 	public partial class AssignmentContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GamecsharpParser.ID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExprContext expr() {
 			return GetRuleContext<ExprContext>(0);
 		}
@@ -654,7 +652,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_assignment; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAssignment(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -701,11 +699,11 @@ public partial class GamecsharpParser : Parser {
 		}
 	}
 	public partial class NumeroContext : ExprContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NUMBER() { return GetToken(GamecsharpParser.NUMBER, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NUMBER() { return GetToken(GameSharpParser.NUMBER, 0); }
 		public NumeroContext(ExprContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNumero(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -720,7 +718,7 @@ public partial class GamecsharpParser : Parser {
 		public AddSubContext(ExprContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAddSub(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -732,17 +730,17 @@ public partial class GamecsharpParser : Parser {
 		public ParentesisContext(ExprContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitParentesis(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 	public partial class IdenticadorContext : ExprContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GamecsharpParser.ID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
 		public IdenticadorContext(ExprContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIdenticador(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -757,7 +755,7 @@ public partial class GamecsharpParser : Parser {
 		public MultiplicacionydivisionContext(ExprContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitMultiplicacionydivision(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -906,7 +904,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_ifStatement; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIfStatement(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -976,7 +974,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_whileStatement; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitWhileStatement(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1030,7 +1028,7 @@ public partial class GamecsharpParser : Parser {
 	}
 
 	public partial class FunctionCallContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GamecsharpParser.ID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ExprListContext exprList() {
 			return GetRuleContext<ExprListContext>(0);
 		}
@@ -1041,7 +1039,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_functionCall; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFunctionCall(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1091,7 +1089,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_exprList; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitExprList(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1137,9 +1135,9 @@ public partial class GamecsharpParser : Parser {
 	}
 
 	public partial class ValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode STRING() { return GetToken(GamecsharpParser.STRING, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NUMBER() { return GetToken(GamecsharpParser.NUMBER, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GamecsharpParser.ID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode STRING() { return GetToken(GameSharpParser.STRING, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NUMBER() { return GetToken(GameSharpParser.NUMBER, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
 		public ValueContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1147,7 +1145,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_value; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitValue(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1194,7 +1192,7 @@ public partial class GamecsharpParser : Parser {
 		public override int RuleIndex { get { return RULE_printStatement; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGamecsharpVisitor<TResult> typedVisitor = visitor as IGamecsharpVisitor<TResult>;
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPrintStatement(this);
 			else return visitor.VisitChildren(this);
 		}

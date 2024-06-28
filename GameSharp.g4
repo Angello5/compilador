@@ -1,15 +1,15 @@
-grammar Gamecsharp;
+grammar GameSharp;
 
 prog:   statement* ;
 
-statement: 
+statement:
       objectDecl
     | eventHandler
     | actionDecl
     | command
     ;
 
-// Declaración de objetos  personajes
+// Declaración de objetos personajes
 objectDecl: 'objeto' ID '{' objectBody '}' ;
 objectBody: (propertyDecl ';')* ;
 propertyDecl: 'propiedad' ID '=' value ;
@@ -51,8 +51,9 @@ exprList: expr (',' expr)* ;
 // Valores
 value: STRING | NUMBER | 'verdadero' | 'falso' | ID ;
 
-//Imprimir en consola 
+// Imprimir en consola 
 printStatement: 'imprimir' '(' expr ')' ';' ;
+
 // Tokens
 ID     : [a-zA-Z_][a-zA-Z0-9_]* ; // Identificadores
 NUMBER : [0-9]+ ;                 // Números enteros

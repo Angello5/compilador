@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from Gamecsharp.g4 by ANTLR 4.13.1
+// Generated from d:/compilador/GameSharp.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -29,10 +29,8 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.13.1")]
 [System.CLSCompliant(false)]
-#pragma warning disable CS3021 // Type or member does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute
-public partial class GamecsharpLexer : Lexer {
-#pragma warning restore CS3021 // Type or member does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute
-    protected static DFA[] decisionToDFA;
+public partial class GameSharpLexer : Lexer {
+	protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
@@ -55,10 +53,10 @@ public partial class GamecsharpLexer : Lexer {
 	};
 
 
-	public GamecsharpLexer(ICharStream input)
+	public GameSharpLexer(ICharStream input)
 	: this(input, Console.Out, Console.Error) { }
 
-	public GamecsharpLexer(ICharStream input, TextWriter output, TextWriter errorOutput)
+	public GameSharpLexer(ICharStream input, TextWriter output, TextWriter errorOutput)
 	: base(input, output, errorOutput)
 	{
 		Interpreter = new LexerATNSimulator(this, _ATN, decisionToDFA, sharedContextCache);
@@ -86,7 +84,7 @@ public partial class GamecsharpLexer : Lexer {
 		}
 	}
 
-	public override string GrammarFileName { get { return "Gamecsharp.g4"; } }
+	public override string GrammarFileName { get { return "GameSharp.g4"; } }
 
 	public override string[] RuleNames { get { return ruleNames; } }
 
@@ -96,7 +94,7 @@ public partial class GamecsharpLexer : Lexer {
 
 	public override int[] SerializedAtn { get { return _serializedATN; } }
 
-	static GamecsharpLexer() {
+	static GameSharpLexer() {
 		decisionToDFA = new DFA[_ATN.NumberOfDecisions];
 		for (int i = 0; i < _ATN.NumberOfDecisions; i++) {
 			decisionToDFA[i] = new DFA(_ATN.GetDecisionState(i), i);

@@ -1,6 +1,12 @@
 {
-    "dotnet.defaultSolution": "ConsoleApp1.sln",
     "conventionalCommits.scopes": [
         "GitIgnore"
-    ]
+    ],
+    "antlr4.generation": {
+        "mode": "external",
+        "outputDir": "GameSharp",
+        "language": "CSharp",
+        "listeners": false,
+        "visitors": true
+    }
 }
