@@ -1,0 +1,18 @@
+// Declaración de un objeto 'player' con propiedades
+objeto player {
+    propiedad x = 10;
+    propiedad y = 20;
+}
+
+// Declaración de una acción 'moverDerecha' que incrementa la propiedad 'x' del objeto 'player'
+accion moverDerecha {
+    player.x = player.x + 1;
+}
+
+// Manejador de evento para cuando se hace clic
+en click {
+    moverDerecha(); // Llamada a la acción 'moverDerecha'
+}
+
+// Declaración de impresión para mostrar el valor actual de 'x' de 'player'
+imprimir(player.x);

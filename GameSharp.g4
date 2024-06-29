@@ -1,4 +1,8 @@
 grammar GameSharp;
+//generar en lenguaje c#
+options {
+    language = CSharp;
+}
 
 prog:   statement* ;
 
