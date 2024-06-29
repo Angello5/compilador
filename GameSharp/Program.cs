@@ -7,18 +7,17 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        try
-        {
         var isi = "input.isi";
         var fileContent = File.ReadAllText(isi);
 
         var input = new AntlrInputStream(fileContent);
         var lexer = new GameSharpLexer(input);
         var tokenStream = new CommonTokenStream(lexer);
-        var parser = new GameSharpParser(tokenStream);
+        var parser = new GameSharpParser(tokenStream); // Utilizando GameSharpParserBase
 
-        var progContext = parser.prog();
-     // Aplicando el análisis semántico
+        try
+        {
+            var progContext = parser.prog();
             var semanticAnalyzer = new SemanticAnalyzer();
             semanticAnalyzer.Visit(progContext);
 
@@ -26,7 +25,7 @@ internal class Program
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Error durante el análisis: " + ex.Message);
+            Console.WriteLine($"Error durante el análisis: {ex.Message}");
         }
     }
 }

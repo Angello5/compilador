@@ -1,29 +1,30 @@
 using System.Collections.Generic;
 
-namespace GameSharp.SemanticAnalysis {
-    public class Scope {
-        public Scope? Parent { get; set; }
-        public Dictionary<string, Symbol> Symbols { get; set; }
+namespace GameSharp.SemanticAnalysis
+{
+    public class Scope
+    {
+        private readonly Dictionary<string, Symbol> symbols = new Dictionary<string, Symbol>();
+        private readonly Scope parentScope;
 
-        public Scope(Scope? parent = null) {
-            Parent = parent;
-            Symbols = new Dictionary<string, Symbol>();
+        public Scope(Scope parentScope)
+        {
+            this.parentScope = parentScope;
         }
 
-        public void Define(Symbol symbol) {
-            if (Symbols.ContainsKey(symbol.Name)) {
-                throw new System.Exception($"Symbol '{symbol.Name}' is already defined in the current scope.");
-            }
-            Symbols[symbol.Name] = symbol;
+        public void Define(Symbol symbol)
+        {
+            symbols[symbol.Name] = symbol;
         }
 
-        public Symbol? Resolve(string name) {
-            if (Symbols.TryGetValue(name, out Symbol symbol)) {
+        public Symbol Resolve(string name)
+        {
+            if (symbols.TryGetValue(name, out var symbol))
+            {
                 return symbol;
-            } else if (Parent != null) {
-                return Parent.Resolve(name);
             }
-            return null;
+            return parentScope?.Resolve(name);
         }
     }
 }
+

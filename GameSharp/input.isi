@@ -1,0 +1,21 @@
+objeto Personaje {
+    propiedad x = 10;
+    propiedad x = 20; // Error: propiedad 'x' ya está declarada en este ámbito
+}
+
+objeto Jugador {
+    propiedad y = "texto"; // Error: 'y' debe ser un valor entero
+}
+
+en click {
+    z = 5; // Error: la variable 'z' no está declarada
+}
+
+accion Mover {
+    b = x + 1; // Error: la variable 'b' no está declarada
+    x = y + 1; // Error: 'y' no está declarado
+}
+
+en click {
+    Mover(); // Error: la acción 'Mover' no está declarada
+}
