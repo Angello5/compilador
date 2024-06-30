@@ -1,4 +1,7 @@
 ﻿using Antlr4.Runtime;
+using System;
+using System.IO;
+using GameSharp.SemanticAnalysis;
 
 internal class Program
 {
@@ -10,8 +13,19 @@ internal class Program
         var input = new AntlrInputStream(fileContent);
         var lexer = new GameSharpLexer(input);
         var tokenStream = new CommonTokenStream(lexer);
-        var parser = new GameSharpParser(tokenStream);
+        var parser = new GameSharpParser(tokenStream); // Utilizando GameSharpParserBase
 
-        var progContext = parser.prog();
+        try
+        {
+            var progContext = parser.prog();
+            var semanticAnalyzer = new SemanticAnalyzer();
+            semanticAnalyzer.Visit(progContext);
+
+            Console.WriteLine("Análisis semántico completado con éxito.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error durante el análisis: {ex.Message}");
+        }
     }
 }
