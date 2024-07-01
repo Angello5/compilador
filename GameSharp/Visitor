@@ -1,0 +1,54 @@
+namespace GameSharp
+{
+    public class Visitor: GameSharpBaseVisitor<object?>
+    {
+        private Dictionary<string, object?> Variables { get; } = new();
+        public override object? VisitAssignment(GameSharpParser.AssignmentContext context)
+        {
+            var name = context.ID().GetText();
+            var value = Visit(context.comp_expr());
+
+            Variables[name] = value;
+            Console.WriteLine(value);
+
+            return null;
+        }
+
+        public override object? VisitPrintStatement(GameSharpParser.PrintStatementContext context)
+        {
+            var expresion = Visit(context.expr());
+
+            Console.WriteLine(expresion);
+
+            return null;
+        }
+
+        public override object? VisitValue(GameSharpParser.ValueContext context)
+        {
+            if (context.NUMBER() is {} i)
+                return float.Parse(i.GetText());
+
+            if (context.STRING() is {} s)
+                return s.GetText()[1..^1];
+        
+            if (context.BOOL() is {} b)
+                return b.GetText() == "verdadero";
+
+            if (context.ID() != null && Variables.ContainsKey(context.ID().GetText()))
+                return Variables[context.ID().GetText()];
+
+            return null;
+        }
+
+        public override object? VisitGenerateRandom(GameSharpParser.GenerateRandomContext context)
+        {
+            var minValue = (int)Visit(context.expr(0));
+            var maxValue = (int)Visit(context.expr(1));
+
+            Random random = new Random();
+            int randomNumber = random.Next(minValue, maxValue);
+
+            return randomNumber;
+        }
+    }
+}

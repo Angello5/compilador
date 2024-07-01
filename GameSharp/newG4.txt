@@ -32,28 +32,31 @@ command:
     | whileStatement
     | functionCall
     | printStatement
+    | generateRandom
     ;
 
 // Asignación y expresiones
-assignment: ID '=' expr ';' ;
-expr: 
-      expr ('*' | '/') expr   # Multiplicacionydivision
-    | expr ('+' | '-') expr   # AddSub
-    | '(' expr ')'            # Parentesis
-    | NUMBER                  # Numero
-    | ID                      # Identicador
-    ;
+assignment: ID '=' comp_expr ';' ;
+comp_expr: expr (comp_op expr)?;
+expr: value (op value)*;
+
+// Operaciones
+op: '+' | '-' | '*' | '/';
+comp_op: '>' | '<' | '>=' | '<=' | '==' | '!=';
 
 // Estructuras de control de flujo
 ifStatement: 'si' '(' expr ')' '{' command* '}' ;
 whileStatement: 'mientras' '(' expr ')' '{' command* '}' ;
+
+// Generar numero random
+generateRandom: 'aleatorio(' expr ',' expr ');';
 
 // Llamadas a funciones predefinidas
 functionCall: ID '(' exprList ')' ';' ;
 exprList: expr (',' expr)* ;
 
 // Valores
-value: STRING | NUMBER | 'verdadero' | 'falso' | ID ;
+value: STRING | NUMBER | BOOL | ID ;
 
 // Imprimir en consola 
 printStatement: 'imprimir' '(' expr ')' ';' ;
@@ -62,4 +65,5 @@ printStatement: 'imprimir' '(' expr ')' ';' ;
 ID     : [a-zA-Z_][a-zA-Z0-9_]* ; // Identificadores
 NUMBER : [0-9]+ ;                 // Números enteros
 STRING : '"' [^"]* '"' ;          // Cadenas de texto
+BOOL   : 'verdadero' | 'falso';   // Booleanos
 WS     : [ \t\r\n]+ -> skip ;     // Espacios en blanco y saltos de línea
