@@ -1,6 +1,4 @@
 ﻿using Antlr4.Runtime;
-using System;
-using System.IO;
 using GameSharp.SemanticAnalysis;
 
 internal class Program
