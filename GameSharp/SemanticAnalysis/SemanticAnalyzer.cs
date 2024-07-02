@@ -73,7 +73,7 @@ namespace GameSharp.SemanticAnalysis
         }
 
         // Manejadores de eventos
-        public override object VisitEventHandler(GameSharpParser.EventHandlerContext context)
+/*         public override object VisitEventHandler(GameSharpParser.EventHandlerContext context)
         {
             string eventType = context.eventType().GetText();
             Console.WriteLine($"Manejador de eventos: {eventType}");
@@ -88,7 +88,7 @@ namespace GameSharp.SemanticAnalysis
 
             currentScope = oldScope;
             return null;
-        }
+        } */
 
         // Declaraciones de acciones
         public override object VisitActionDecl(GameSharpParser.ActionDeclContext context)
@@ -112,7 +112,7 @@ namespace GameSharp.SemanticAnalysis
             currentScope = oldScope;
             return null;
         }
-
+/* 
         // Asignaciones
         public override object VisitAssignment(GameSharpParser.AssignmentContext context)
         {
@@ -163,7 +163,7 @@ namespace GameSharp.SemanticAnalysis
             currentScope = oldScope;
             return null;
         }
-
+ */
         // Llamadas a funciones
         public override object VisitFunctionCall(GameSharpParser.FunctionCallContext context)
         {
@@ -187,7 +187,7 @@ namespace GameSharp.SemanticAnalysis
             return null;
         }
 
-        // Expresiones
+/*         // Expresiones
         public override object VisitAddSub(GameSharpParser.AddSubContext context)
         {
             Console.WriteLine("Expresión de suma/resta");
@@ -226,6 +226,6 @@ namespace GameSharp.SemanticAnalysis
                 throw new Exception($"El identificador '{id}' no está declarado.");
             }
             return null;
-        }
+        } */
     }
 }

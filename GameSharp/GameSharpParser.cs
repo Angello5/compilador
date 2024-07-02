@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from d:/compilador/GameSharp.g4 by ANTLR 4.13.1
+// Generated from e:/WorkStation/compilador/GameSharp.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -39,29 +39,30 @@ public partial class GameSharpParser : Parser {
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
 		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
 		T__17=18, T__18=19, T__19=20, T__20=21, T__21=22, T__22=23, T__23=24, 
-		ID=25, NUMBER=26, STRING=27, WS=28;
+		T__24=25, ID=26, NUMBER=27, STRING=28, BOOL=29, WS=30;
 	public const int
 		RULE_prog = 0, RULE_statement = 1, RULE_objectDecl = 2, RULE_objectBody = 3, 
-		RULE_propertyDecl = 4, RULE_eventHandler = 5, RULE_eventType = 6, RULE_actionDecl = 7, 
-		RULE_command = 8, RULE_assignment = 9, RULE_expr = 10, RULE_ifStatement = 11, 
-		RULE_whileStatement = 12, RULE_functionCall = 13, RULE_exprList = 14, 
-		RULE_value = 15, RULE_printStatement = 16;
+		RULE_propertyDecl = 4, RULE_actionDecl = 5, RULE_command = 6, RULE_assignment = 7, 
+		RULE_expr = 8, RULE_comp_expr = 9, RULE_value = 10, RULE_objectProperty = 11, 
+		RULE_op = 12, RULE_comp_op = 13, RULE_ifStatement = 14, RULE_elseStatement = 15, 
+		RULE_whileStatement = 16, RULE_printStatement = 17, RULE_readStatement = 18, 
+		RULE_functionCall = 19;
 	public static readonly string[] ruleNames = {
-		"prog", "statement", "objectDecl", "objectBody", "propertyDecl", "eventHandler", 
-		"eventType", "actionDecl", "command", "assignment", "expr", "ifStatement", 
-		"whileStatement", "functionCall", "exprList", "value", "printStatement"
+		"prog", "statement", "objectDecl", "objectBody", "propertyDecl", "actionDecl", 
+		"command", "assignment", "expr", "comp_expr", "value", "objectProperty", 
+		"op", "comp_op", "ifStatement", "elseStatement", "whileStatement", "printStatement", 
+		"readStatement", "functionCall"
 	};
 
 	private static readonly string[] _LiteralNames = {
-		null, "'objeto'", "'{'", "'}'", "';'", "'propiedad'", "'='", "'en'", "'click'", 
-		"'teclaAbajo'", "'teclaArriba'", "'movimientoRaton'", "'accion'", "'*'", 
-		"'/'", "'+'", "'-'", "'('", "')'", "'si'", "'mientras'", "','", "'verdadero'", 
-		"'falso'", "'imprimir'"
+		null, "'objeto'", "'{'", "'}'", "';'", "'propiedad'", "'='", "'accion'", 
+		"'.'", "'+'", "'-'", "'*'", "'/'", "'>'", "'<'", "'>='", "'<='", "'=='", 
+		"'!='", "'si'", "'('", "')'", "'sino'", "'mientras'", "'imprimir'", "'leer'"
 	};
 	private static readonly string[] _SymbolicNames = {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, "ID", "NUMBER", "STRING", "WS"
+		null, null, "ID", "NUMBER", "STRING", "BOOL", "WS"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -123,17 +124,17 @@ public partial class GameSharpParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 37;
+			State = 43;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 51908738L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 126353538L) != 0)) {
 				{
 				{
-				State = 34;
+				State = 40;
 				statement();
 				}
 				}
-				State = 39;
+				State = 45;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -153,9 +154,6 @@ public partial class GameSharpParser : Parser {
 	public partial class StatementContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public ObjectDeclContext objectDecl() {
 			return GetRuleContext<ObjectDeclContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public EventHandlerContext eventHandler() {
-			return GetRuleContext<EventHandlerContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ActionDeclContext actionDecl() {
 			return GetRuleContext<ActionDeclContext>(0);
@@ -181,37 +179,31 @@ public partial class GameSharpParser : Parser {
 		StatementContext _localctx = new StatementContext(Context, State);
 		EnterRule(_localctx, 2, RULE_statement);
 		try {
-			State = 44;
+			State = 49;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case T__0:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 40;
+				State = 46;
 				objectDecl();
 				}
 				break;
 			case T__6:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 41;
-				eventHandler();
-				}
-				break;
-			case T__11:
-				EnterOuterAlt(_localctx, 3);
-				{
-				State = 42;
+				State = 47;
 				actionDecl();
 				}
 				break;
 			case T__18:
-			case T__19:
+			case T__22:
 			case T__23:
+			case T__24:
 			case ID:
-				EnterOuterAlt(_localctx, 4);
+				EnterOuterAlt(_localctx, 3);
 				{
-				State = 43;
+				State = 48;
 				command();
 				}
 				break;
@@ -255,15 +247,15 @@ public partial class GameSharpParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 46;
+			State = 51;
 			Match(T__0);
-			State = 47;
+			State = 52;
 			Match(ID);
-			State = 48;
+			State = 53;
 			Match(T__1);
-			State = 49;
+			State = 54;
 			objectBody();
-			State = 50;
+			State = 55;
 			Match(T__2);
 			}
 		}
@@ -306,19 +298,19 @@ public partial class GameSharpParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 57;
+			State = 62;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==T__4) {
 				{
 				{
-				State = 52;
+				State = 57;
 				propertyDecl();
-				State = 53;
+				State = 58;
 				Match(T__3);
 				}
 				}
-				State = 59;
+				State = 64;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -360,124 +352,14 @@ public partial class GameSharpParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 60;
-			Match(T__4);
-			State = 61;
-			Match(ID);
-			State = 62;
-			Match(T__5);
-			State = 63;
-			value();
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class EventHandlerContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public EventTypeContext eventType() {
-			return GetRuleContext<EventTypeContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public CommandContext[] command() {
-			return GetRuleContexts<CommandContext>();
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public CommandContext command(int i) {
-			return GetRuleContext<CommandContext>(i);
-		}
-		public EventHandlerContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_eventHandler; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEventHandler(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-
-	[RuleVersion(0)]
-	public EventHandlerContext eventHandler() {
-		EventHandlerContext _localctx = new EventHandlerContext(Context, State);
-		EnterRule(_localctx, 10, RULE_eventHandler);
-		int _la;
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
 			State = 65;
-			Match(T__6);
+			Match(T__4);
 			State = 66;
-			eventType();
+			Match(ID);
 			State = 67;
-			Match(T__1);
-			State = 71;
-			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 51904512L) != 0)) {
-				{
-				{
-				State = 68;
-				command();
-				}
-				}
-				State = 73;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-			}
-			State = 74;
-			Match(T__2);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class EventTypeContext : ParserRuleContext {
-		public EventTypeContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_eventType; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEventType(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-
-	[RuleVersion(0)]
-	public EventTypeContext eventType() {
-		EventTypeContext _localctx = new EventTypeContext(Context, State);
-		EnterRule(_localctx, 12, RULE_eventType);
-		int _la;
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 76;
-			_la = TokenStream.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 3840L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			Match(T__5);
+			State = 68;
+			value();
 			}
 		}
 		catch (RecognitionException re) {
@@ -515,32 +397,32 @@ public partial class GameSharpParser : Parser {
 	[RuleVersion(0)]
 	public ActionDeclContext actionDecl() {
 		ActionDeclContext _localctx = new ActionDeclContext(Context, State);
-		EnterRule(_localctx, 14, RULE_actionDecl);
+		EnterRule(_localctx, 10, RULE_actionDecl);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 78;
-			Match(T__11);
-			State = 79;
+			State = 70;
+			Match(T__6);
+			State = 71;
 			Match(ID);
-			State = 80;
+			State = 72;
 			Match(T__1);
-			State = 84;
+			State = 76;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 51904512L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 126353408L) != 0)) {
 				{
 				{
-				State = 81;
+				State = 73;
 				command();
 				}
 				}
-				State = 86;
+				State = 78;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 87;
+			State = 79;
 			Match(T__2);
 			}
 		}
@@ -565,11 +447,14 @@ public partial class GameSharpParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public WhileStatementContext whileStatement() {
 			return GetRuleContext<WhileStatementContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public FunctionCallContext functionCall() {
-			return GetRuleContext<FunctionCallContext>(0);
-		}
 		[System.Diagnostics.DebuggerNonUserCode] public PrintStatementContext printStatement() {
 			return GetRuleContext<PrintStatementContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ReadStatementContext readStatement() {
+			return GetRuleContext<ReadStatementContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public FunctionCallContext functionCall() {
+			return GetRuleContext<FunctionCallContext>(0);
 		}
 		public CommandContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -587,44 +472,51 @@ public partial class GameSharpParser : Parser {
 	[RuleVersion(0)]
 	public CommandContext command() {
 		CommandContext _localctx = new CommandContext(Context, State);
-		EnterRule(_localctx, 16, RULE_command);
+		EnterRule(_localctx, 12, RULE_command);
 		try {
-			State = 94;
+			State = 87;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,5,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,4,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 89;
+				State = 81;
 				assignment();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 90;
+				State = 82;
 				ifStatement();
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 91;
+				State = 83;
 				whileStatement();
 				}
 				break;
 			case 4:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 92;
-				functionCall();
+				State = 84;
+				printStatement();
 				}
 				break;
 			case 5:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 93;
-				printStatement();
+				State = 85;
+				readStatement();
+				}
+				break;
+			case 6:
+				EnterOuterAlt(_localctx, 6);
+				{
+				State = 86;
+				functionCall();
 				}
 				break;
 			}
@@ -641,7 +533,10 @@ public partial class GameSharpParser : Parser {
 	}
 
 	public partial class AssignmentContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] ID() { return GetTokens(GameSharpParser.ID); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID(int i) {
+			return GetToken(GameSharpParser.ID, i);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ExprContext expr() {
 			return GetRuleContext<ExprContext>(0);
 		}
@@ -661,17 +556,30 @@ public partial class GameSharpParser : Parser {
 	[RuleVersion(0)]
 	public AssignmentContext assignment() {
 		AssignmentContext _localctx = new AssignmentContext(Context, State);
-		EnterRule(_localctx, 18, RULE_assignment);
+		EnterRule(_localctx, 14, RULE_assignment);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 96;
+			State = 89;
 			Match(ID);
-			State = 97;
+			State = 92;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==T__7) {
+				{
+				State = 90;
+				Match(T__7);
+				State = 91;
+				Match(ID);
+				}
+			}
+
+			State = 94;
 			Match(T__5);
-			State = 98;
-			expr(0);
-			State = 99;
+			State = 95;
+			expr();
+			State = 96;
 			Match(T__3);
 			}
 		}
@@ -687,192 +595,56 @@ public partial class GameSharpParser : Parser {
 	}
 
 	public partial class ExprContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ValueContext[] value() {
+			return GetRuleContexts<ValueContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ValueContext value(int i) {
+			return GetRuleContext<ValueContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public OpContext[] op() {
+			return GetRuleContexts<OpContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public OpContext op(int i) {
+			return GetRuleContext<OpContext>(i);
+		}
 		public ExprContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_expr; } }
-	 
-		public ExprContext() { }
-		public virtual void CopyFrom(ExprContext context) {
-			base.CopyFrom(context);
-		}
-	}
-	public partial class NumeroContext : ExprContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NUMBER() { return GetToken(GameSharpParser.NUMBER, 0); }
-		public NumeroContext(ExprContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitNumero(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-	public partial class AddSubContext : ExprContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ExprContext[] expr() {
-			return GetRuleContexts<ExprContext>();
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public ExprContext expr(int i) {
-			return GetRuleContext<ExprContext>(i);
-		}
-		public AddSubContext(ExprContext context) { CopyFrom(context); }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitAddSub(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-	public partial class ParentesisContext : ExprContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ExprContext expr() {
-			return GetRuleContext<ExprContext>(0);
-		}
-		public ParentesisContext(ExprContext context) { CopyFrom(context); }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitParentesis(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-	public partial class IdenticadorContext : ExprContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
-		public IdenticadorContext(ExprContext context) { CopyFrom(context); }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitIdenticador(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-	public partial class MultiplicacionydivisionContext : ExprContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ExprContext[] expr() {
-			return GetRuleContexts<ExprContext>();
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public ExprContext expr(int i) {
-			return GetRuleContext<ExprContext>(i);
-		}
-		public MultiplicacionydivisionContext(ExprContext context) { CopyFrom(context); }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitMultiplicacionydivision(this);
+			if (typedVisitor != null) return typedVisitor.VisitExpr(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 
 	[RuleVersion(0)]
 	public ExprContext expr() {
-		return expr(0);
-	}
-
-	private ExprContext expr(int _p) {
-		ParserRuleContext _parentctx = Context;
-		int _parentState = State;
-		ExprContext _localctx = new ExprContext(Context, _parentState);
-		ExprContext _prevctx = _localctx;
-		int _startState = 20;
-		EnterRecursionRule(_localctx, 20, RULE_expr, _p);
+		ExprContext _localctx = new ExprContext(Context, State);
+		EnterRule(_localctx, 16, RULE_expr);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 108;
+			State = 98;
+			value();
+			State = 104;
 			ErrorHandler.Sync(this);
-			switch (TokenStream.LA(1)) {
-			case T__16:
+			_la = TokenStream.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 7680L) != 0)) {
 				{
-				_localctx = new ParentesisContext(_localctx);
-				Context = _localctx;
-				_prevctx = _localctx;
-
-				State = 102;
-				Match(T__16);
-				State = 103;
-				expr(0);
-				State = 104;
-				Match(T__17);
+				{
+				State = 99;
+				op();
+				State = 100;
+				value();
 				}
-				break;
-			case NUMBER:
-				{
-				_localctx = new NumeroContext(_localctx);
-				Context = _localctx;
-				_prevctx = _localctx;
+				}
 				State = 106;
-				Match(NUMBER);
-				}
-				break;
-			case ID:
-				{
-				_localctx = new IdenticadorContext(_localctx);
-				Context = _localctx;
-				_prevctx = _localctx;
-				State = 107;
-				Match(ID);
-				}
-				break;
-			default:
-				throw new NoViableAltException(this);
-			}
-			Context.Stop = TokenStream.LT(-1);
-			State = 118;
-			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,8,Context);
-			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1 ) {
-					if ( ParseListeners!=null )
-						TriggerExitRuleEvent();
-					_prevctx = _localctx;
-					{
-					State = 116;
-					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,7,Context) ) {
-					case 1:
-						{
-						_localctx = new MultiplicacionydivisionContext(new ExprContext(_parentctx, _parentState));
-						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 110;
-						if (!(Precpred(Context, 5))) throw new FailedPredicateException(this, "Precpred(Context, 5)");
-						State = 111;
-						_la = TokenStream.LA(1);
-						if ( !(_la==T__12 || _la==T__13) ) {
-						ErrorHandler.RecoverInline(this);
-						}
-						else {
-							ErrorHandler.ReportMatch(this);
-						    Consume();
-						}
-						State = 112;
-						expr(6);
-						}
-						break;
-					case 2:
-						{
-						_localctx = new AddSubContext(new ExprContext(_parentctx, _parentState));
-						PushNewRecursionContext(_localctx, _startState, RULE_expr);
-						State = 113;
-						if (!(Precpred(Context, 4))) throw new FailedPredicateException(this, "Precpred(Context, 4)");
-						State = 114;
-						_la = TokenStream.LA(1);
-						if ( !(_la==T__14 || _la==T__15) ) {
-						ErrorHandler.RecoverInline(this);
-						}
-						else {
-							ErrorHandler.ReportMatch(this);
-						    Consume();
-						}
-						State = 115;
-						expr(5);
-						}
-						break;
-					}
-					} 
-				}
-				State = 120;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,8,Context);
+				_la = TokenStream.LA(1);
 			}
 			}
 		}
@@ -882,20 +654,290 @@ public partial class GameSharpParser : Parser {
 			ErrorHandler.Recover(this, re);
 		}
 		finally {
-			UnrollRecursionContexts(_parentctx);
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Comp_exprContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ExprContext[] expr() {
+			return GetRuleContexts<ExprContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ExprContext expr(int i) {
+			return GetRuleContext<ExprContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public Comp_opContext comp_op() {
+			return GetRuleContext<Comp_opContext>(0);
+		}
+		public Comp_exprContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_comp_expr; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitComp_expr(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Comp_exprContext comp_expr() {
+		Comp_exprContext _localctx = new Comp_exprContext(Context, State);
+		EnterRule(_localctx, 18, RULE_comp_expr);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 107;
+			expr();
+			State = 111;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 516096L) != 0)) {
+				{
+				State = 108;
+				comp_op();
+				State = 109;
+				expr();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ValueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode STRING() { return GetToken(GameSharpParser.STRING, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NUMBER() { return GetToken(GameSharpParser.NUMBER, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode BOOL() { return GetToken(GameSharpParser.BOOL, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ObjectPropertyContext objectProperty() {
+			return GetRuleContext<ObjectPropertyContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
+		public ValueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_value; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitValue(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public ValueContext value() {
+		ValueContext _localctx = new ValueContext(Context, State);
+		EnterRule(_localctx, 20, RULE_value);
+		try {
+			State = 118;
+			ErrorHandler.Sync(this);
+			switch ( Interpreter.AdaptivePredict(TokenStream,8,Context) ) {
+			case 1:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 113;
+				Match(STRING);
+				}
+				break;
+			case 2:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 114;
+				Match(NUMBER);
+				}
+				break;
+			case 3:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 115;
+				Match(BOOL);
+				}
+				break;
+			case 4:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 116;
+				objectProperty();
+				}
+				break;
+			case 5:
+				EnterOuterAlt(_localctx, 5);
+				{
+				State = 117;
+				Match(ID);
+				}
+				break;
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ObjectPropertyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] ID() { return GetTokens(GameSharpParser.ID); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID(int i) {
+			return GetToken(GameSharpParser.ID, i);
+		}
+		public ObjectPropertyContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_objectProperty; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitObjectProperty(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public ObjectPropertyContext objectProperty() {
+		ObjectPropertyContext _localctx = new ObjectPropertyContext(Context, State);
+		EnterRule(_localctx, 22, RULE_objectProperty);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 120;
+			Match(ID);
+			State = 121;
+			Match(T__7);
+			State = 122;
+			Match(ID);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class OpContext : ParserRuleContext {
+		public OpContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_op; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitOp(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public OpContext op() {
+		OpContext _localctx = new OpContext(Context, State);
+		EnterRule(_localctx, 24, RULE_op);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 124;
+			_la = TokenStream.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 7680L) != 0)) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Comp_opContext : ParserRuleContext {
+		public Comp_opContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_comp_op; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitComp_op(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Comp_opContext comp_op() {
+		Comp_opContext _localctx = new Comp_opContext(Context, State);
+		EnterRule(_localctx, 26, RULE_comp_op);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 126;
+			_la = TokenStream.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 516096L) != 0)) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
 		}
 		return _localctx;
 	}
 
 	public partial class IfStatementContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ExprContext expr() {
-			return GetRuleContext<ExprContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public Comp_exprContext comp_expr() {
+			return GetRuleContext<Comp_exprContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public CommandContext[] command() {
 			return GetRuleContexts<CommandContext>();
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public CommandContext command(int i) {
 			return GetRuleContext<CommandContext>(i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ElseStatementContext elseStatement() {
+			return GetRuleContext<ElseStatementContext>(0);
 		}
 		public IfStatementContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -913,36 +955,107 @@ public partial class GameSharpParser : Parser {
 	[RuleVersion(0)]
 	public IfStatementContext ifStatement() {
 		IfStatementContext _localctx = new IfStatementContext(Context, State);
-		EnterRule(_localctx, 22, RULE_ifStatement);
+		EnterRule(_localctx, 28, RULE_ifStatement);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 121;
+			State = 128;
 			Match(T__18);
-			State = 122;
-			Match(T__16);
-			State = 123;
-			expr(0);
-			State = 124;
-			Match(T__17);
-			State = 125;
-			Match(T__1);
 			State = 129;
+			Match(T__19);
+			State = 130;
+			comp_expr();
+			State = 131;
+			Match(T__20);
+			State = 132;
+			Match(T__1);
+			State = 136;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 51904512L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 126353408L) != 0)) {
 				{
 				{
-				State = 126;
+				State = 133;
 				command();
 				}
 				}
-				State = 131;
+				State = 138;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 132;
+			State = 139;
+			Match(T__2);
+			State = 141;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==T__21) {
+				{
+				State = 140;
+				elseStatement();
+				}
+			}
+
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ElseStatementContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public CommandContext[] command() {
+			return GetRuleContexts<CommandContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public CommandContext command(int i) {
+			return GetRuleContext<CommandContext>(i);
+		}
+		public ElseStatementContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_elseStatement; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitElseStatement(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public ElseStatementContext elseStatement() {
+		ElseStatementContext _localctx = new ElseStatementContext(Context, State);
+		EnterRule(_localctx, 30, RULE_elseStatement);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 143;
+			Match(T__21);
+			State = 144;
+			Match(T__1);
+			State = 148;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 126353408L) != 0)) {
+				{
+				{
+				State = 145;
+				command();
+				}
+				}
+				State = 150;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+			}
+			State = 151;
 			Match(T__2);
 			}
 		}
@@ -958,8 +1071,8 @@ public partial class GameSharpParser : Parser {
 	}
 
 	public partial class WhileStatementContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ExprContext expr() {
-			return GetRuleContext<ExprContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public Comp_exprContext comp_expr() {
+			return GetRuleContext<Comp_exprContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public CommandContext[] command() {
 			return GetRuleContexts<CommandContext>();
@@ -983,191 +1096,37 @@ public partial class GameSharpParser : Parser {
 	[RuleVersion(0)]
 	public WhileStatementContext whileStatement() {
 		WhileStatementContext _localctx = new WhileStatementContext(Context, State);
-		EnterRule(_localctx, 24, RULE_whileStatement);
-		int _la;
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 134;
-			Match(T__19);
-			State = 135;
-			Match(T__16);
-			State = 136;
-			expr(0);
-			State = 137;
-			Match(T__17);
-			State = 138;
-			Match(T__1);
-			State = 142;
-			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 51904512L) != 0)) {
-				{
-				{
-				State = 139;
-				command();
-				}
-				}
-				State = 144;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-			}
-			State = 145;
-			Match(T__2);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class FunctionCallContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ExprListContext exprList() {
-			return GetRuleContext<ExprListContext>(0);
-		}
-		public FunctionCallContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_functionCall; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFunctionCall(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-
-	[RuleVersion(0)]
-	public FunctionCallContext functionCall() {
-		FunctionCallContext _localctx = new FunctionCallContext(Context, State);
-		EnterRule(_localctx, 26, RULE_functionCall);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 147;
-			Match(ID);
-			State = 148;
-			Match(T__16);
-			State = 149;
-			exprList();
-			State = 150;
-			Match(T__17);
-			State = 151;
-			Match(T__3);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class ExprListContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ExprContext[] expr() {
-			return GetRuleContexts<ExprContext>();
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public ExprContext expr(int i) {
-			return GetRuleContext<ExprContext>(i);
-		}
-		public ExprListContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_exprList; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitExprList(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-
-	[RuleVersion(0)]
-	public ExprListContext exprList() {
-		ExprListContext _localctx = new ExprListContext(Context, State);
-		EnterRule(_localctx, 28, RULE_exprList);
+		EnterRule(_localctx, 32, RULE_whileStatement);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 153;
-			expr(0);
-			State = 158;
+			Match(T__22);
+			State = 154;
+			Match(T__19);
+			State = 155;
+			comp_expr();
+			State = 156;
+			Match(T__20);
+			State = 157;
+			Match(T__1);
+			State = 161;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			while (_la==T__20) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 126353408L) != 0)) {
 				{
 				{
-				State = 154;
-				Match(T__20);
-				State = 155;
-				expr(0);
+				State = 158;
+				command();
 				}
 				}
-				State = 160;
+				State = 163;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class ValueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode STRING() { return GetToken(GameSharpParser.STRING, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NUMBER() { return GetToken(GameSharpParser.NUMBER, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
-		public ValueContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_value; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitValue(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-
-	[RuleVersion(0)]
-	public ValueContext value() {
-		ValueContext _localctx = new ValueContext(Context, State);
-		EnterRule(_localctx, 30, RULE_value);
-		int _la;
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 161;
-			_la = TokenStream.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 247463936L) != 0)) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			State = 164;
+			Match(T__2);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1201,19 +1160,19 @@ public partial class GameSharpParser : Parser {
 	[RuleVersion(0)]
 	public PrintStatementContext printStatement() {
 		PrintStatementContext _localctx = new PrintStatementContext(Context, State);
-		EnterRule(_localctx, 32, RULE_printStatement);
+		EnterRule(_localctx, 34, RULE_printStatement);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 163;
-			Match(T__23);
-			State = 164;
-			Match(T__16);
-			State = 165;
-			expr(0);
 			State = 166;
-			Match(T__17);
+			Match(T__23);
 			State = 167;
+			Match(T__19);
+			State = 168;
+			expr();
+			State = 169;
+			Match(T__20);
+			State = 170;
 			Match(T__3);
 			}
 		}
@@ -1228,72 +1187,160 @@ public partial class GameSharpParser : Parser {
 		return _localctx;
 	}
 
-	public override bool Sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
-		switch (ruleIndex) {
-		case 10: return expr_sempred((ExprContext)_localctx, predIndex);
+	public partial class ReadStatementContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
+		public ReadStatementContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
 		}
-		return true;
+		public override int RuleIndex { get { return RULE_readStatement; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitReadStatement(this);
+			else return visitor.VisitChildren(this);
+		}
 	}
-	private bool expr_sempred(ExprContext _localctx, int predIndex) {
-		switch (predIndex) {
-		case 0: return Precpred(Context, 5);
-		case 1: return Precpred(Context, 4);
+
+	[RuleVersion(0)]
+	public ReadStatementContext readStatement() {
+		ReadStatementContext _localctx = new ReadStatementContext(Context, State);
+		EnterRule(_localctx, 36, RULE_readStatement);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 172;
+			Match(T__24);
+			State = 173;
+			Match(T__19);
+			State = 174;
+			Match(ID);
+			State = 175;
+			Match(T__20);
+			State = 176;
+			Match(T__3);
+			}
 		}
-		return true;
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FunctionCallContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode ID() { return GetToken(GameSharpParser.ID, 0); }
+		public FunctionCallContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_functionCall; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IGameSharpVisitor<TResult> typedVisitor = visitor as IGameSharpVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitFunctionCall(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public FunctionCallContext functionCall() {
+		FunctionCallContext _localctx = new FunctionCallContext(Context, State);
+		EnterRule(_localctx, 38, RULE_functionCall);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 178;
+			Match(ID);
+			State = 181;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==T__19) {
+				{
+				State = 179;
+				Match(T__19);
+				State = 180;
+				Match(T__20);
+				}
+			}
+
+			State = 183;
+			Match(T__3);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
 	}
 
 	private static int[] _serializedATN = {
-		4,1,28,170,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
+		4,1,30,186,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
 		7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,14,
-		2,15,7,15,2,16,7,16,1,0,5,0,36,8,0,10,0,12,0,39,9,0,1,1,1,1,1,1,1,1,3,
-		1,45,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,3,1,3,1,3,5,3,56,8,3,10,3,12,3,59,9,
-		3,1,4,1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,5,5,70,8,5,10,5,12,5,73,9,5,1,5,
-		1,5,1,6,1,6,1,7,1,7,1,7,1,7,5,7,83,8,7,10,7,12,7,86,9,7,1,7,1,7,1,8,1,
-		8,1,8,1,8,1,8,3,8,95,8,8,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,1,10,
-		1,10,1,10,3,10,109,8,10,1,10,1,10,1,10,1,10,1,10,1,10,5,10,117,8,10,10,
-		10,12,10,120,9,10,1,11,1,11,1,11,1,11,1,11,1,11,5,11,128,8,11,10,11,12,
-		11,131,9,11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,12,5,12,141,8,12,10,12,
-		12,12,144,9,12,1,12,1,12,1,13,1,13,1,13,1,13,1,13,1,13,1,14,1,14,1,14,
-		5,14,157,8,14,10,14,12,14,160,9,14,1,15,1,15,1,16,1,16,1,16,1,16,1,16,
-		1,16,1,16,0,1,20,17,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,0,4,
-		1,0,8,11,1,0,13,14,1,0,15,16,2,0,22,23,25,27,170,0,37,1,0,0,0,2,44,1,0,
-		0,0,4,46,1,0,0,0,6,57,1,0,0,0,8,60,1,0,0,0,10,65,1,0,0,0,12,76,1,0,0,0,
-		14,78,1,0,0,0,16,94,1,0,0,0,18,96,1,0,0,0,20,108,1,0,0,0,22,121,1,0,0,
-		0,24,134,1,0,0,0,26,147,1,0,0,0,28,153,1,0,0,0,30,161,1,0,0,0,32,163,1,
-		0,0,0,34,36,3,2,1,0,35,34,1,0,0,0,36,39,1,0,0,0,37,35,1,0,0,0,37,38,1,
-		0,0,0,38,1,1,0,0,0,39,37,1,0,0,0,40,45,3,4,2,0,41,45,3,10,5,0,42,45,3,
-		14,7,0,43,45,3,16,8,0,44,40,1,0,0,0,44,41,1,0,0,0,44,42,1,0,0,0,44,43,
-		1,0,0,0,45,3,1,0,0,0,46,47,5,1,0,0,47,48,5,25,0,0,48,49,5,2,0,0,49,50,
-		3,6,3,0,50,51,5,3,0,0,51,5,1,0,0,0,52,53,3,8,4,0,53,54,5,4,0,0,54,56,1,
-		0,0,0,55,52,1,0,0,0,56,59,1,0,0,0,57,55,1,0,0,0,57,58,1,0,0,0,58,7,1,0,
-		0,0,59,57,1,0,0,0,60,61,5,5,0,0,61,62,5,25,0,0,62,63,5,6,0,0,63,64,3,30,
-		15,0,64,9,1,0,0,0,65,66,5,7,0,0,66,67,3,12,6,0,67,71,5,2,0,0,68,70,3,16,
-		8,0,69,68,1,0,0,0,70,73,1,0,0,0,71,69,1,0,0,0,71,72,1,0,0,0,72,74,1,0,
-		0,0,73,71,1,0,0,0,74,75,5,3,0,0,75,11,1,0,0,0,76,77,7,0,0,0,77,13,1,0,
-		0,0,78,79,5,12,0,0,79,80,5,25,0,0,80,84,5,2,0,0,81,83,3,16,8,0,82,81,1,
-		0,0,0,83,86,1,0,0,0,84,82,1,0,0,0,84,85,1,0,0,0,85,87,1,0,0,0,86,84,1,
-		0,0,0,87,88,5,3,0,0,88,15,1,0,0,0,89,95,3,18,9,0,90,95,3,22,11,0,91,95,
-		3,24,12,0,92,95,3,26,13,0,93,95,3,32,16,0,94,89,1,0,0,0,94,90,1,0,0,0,
-		94,91,1,0,0,0,94,92,1,0,0,0,94,93,1,0,0,0,95,17,1,0,0,0,96,97,5,25,0,0,
-		97,98,5,6,0,0,98,99,3,20,10,0,99,100,5,4,0,0,100,19,1,0,0,0,101,102,6,
-		10,-1,0,102,103,5,17,0,0,103,104,3,20,10,0,104,105,5,18,0,0,105,109,1,
-		0,0,0,106,109,5,26,0,0,107,109,5,25,0,0,108,101,1,0,0,0,108,106,1,0,0,
-		0,108,107,1,0,0,0,109,118,1,0,0,0,110,111,10,5,0,0,111,112,7,1,0,0,112,
-		117,3,20,10,6,113,114,10,4,0,0,114,115,7,2,0,0,115,117,3,20,10,5,116,110,
-		1,0,0,0,116,113,1,0,0,0,117,120,1,0,0,0,118,116,1,0,0,0,118,119,1,0,0,
-		0,119,21,1,0,0,0,120,118,1,0,0,0,121,122,5,19,0,0,122,123,5,17,0,0,123,
-		124,3,20,10,0,124,125,5,18,0,0,125,129,5,2,0,0,126,128,3,16,8,0,127,126,
-		1,0,0,0,128,131,1,0,0,0,129,127,1,0,0,0,129,130,1,0,0,0,130,132,1,0,0,
-		0,131,129,1,0,0,0,132,133,5,3,0,0,133,23,1,0,0,0,134,135,5,20,0,0,135,
-		136,5,17,0,0,136,137,3,20,10,0,137,138,5,18,0,0,138,142,5,2,0,0,139,141,
-		3,16,8,0,140,139,1,0,0,0,141,144,1,0,0,0,142,140,1,0,0,0,142,143,1,0,0,
-		0,143,145,1,0,0,0,144,142,1,0,0,0,145,146,5,3,0,0,146,25,1,0,0,0,147,148,
-		5,25,0,0,148,149,5,17,0,0,149,150,3,28,14,0,150,151,5,18,0,0,151,152,5,
-		4,0,0,152,27,1,0,0,0,153,158,3,20,10,0,154,155,5,21,0,0,155,157,3,20,10,
-		0,156,154,1,0,0,0,157,160,1,0,0,0,158,156,1,0,0,0,158,159,1,0,0,0,159,
-		29,1,0,0,0,160,158,1,0,0,0,161,162,7,3,0,0,162,31,1,0,0,0,163,164,5,24,
-		0,0,164,165,5,17,0,0,165,166,3,20,10,0,166,167,5,18,0,0,167,168,5,4,0,
-		0,168,33,1,0,0,0,12,37,44,57,71,84,94,108,116,118,129,142,158
+		2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,1,0,5,0,42,8,0,10,0,
+		12,0,45,9,0,1,1,1,1,1,1,3,1,50,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,3,1,3,1,3,
+		5,3,61,8,3,10,3,12,3,64,9,3,1,4,1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,5,5,75,
+		8,5,10,5,12,5,78,9,5,1,5,1,5,1,6,1,6,1,6,1,6,1,6,1,6,3,6,88,8,6,1,7,1,
+		7,1,7,3,7,93,8,7,1,7,1,7,1,7,1,7,1,8,1,8,1,8,1,8,5,8,103,8,8,10,8,12,8,
+		106,9,8,1,9,1,9,1,9,1,9,3,9,112,8,9,1,10,1,10,1,10,1,10,1,10,3,10,119,
+		8,10,1,11,1,11,1,11,1,11,1,12,1,12,1,13,1,13,1,14,1,14,1,14,1,14,1,14,
+		1,14,5,14,135,8,14,10,14,12,14,138,9,14,1,14,1,14,3,14,142,8,14,1,15,1,
+		15,1,15,5,15,147,8,15,10,15,12,15,150,9,15,1,15,1,15,1,16,1,16,1,16,1,
+		16,1,16,1,16,5,16,160,8,16,10,16,12,16,163,9,16,1,16,1,16,1,17,1,17,1,
+		17,1,17,1,17,1,17,1,18,1,18,1,18,1,18,1,18,1,18,1,19,1,19,1,19,3,19,182,
+		8,19,1,19,1,19,1,19,0,0,20,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,
+		32,34,36,38,0,2,1,0,9,12,1,0,13,18,187,0,43,1,0,0,0,2,49,1,0,0,0,4,51,
+		1,0,0,0,6,62,1,0,0,0,8,65,1,0,0,0,10,70,1,0,0,0,12,87,1,0,0,0,14,89,1,
+		0,0,0,16,98,1,0,0,0,18,107,1,0,0,0,20,118,1,0,0,0,22,120,1,0,0,0,24,124,
+		1,0,0,0,26,126,1,0,0,0,28,128,1,0,0,0,30,143,1,0,0,0,32,153,1,0,0,0,34,
+		166,1,0,0,0,36,172,1,0,0,0,38,178,1,0,0,0,40,42,3,2,1,0,41,40,1,0,0,0,
+		42,45,1,0,0,0,43,41,1,0,0,0,43,44,1,0,0,0,44,1,1,0,0,0,45,43,1,0,0,0,46,
+		50,3,4,2,0,47,50,3,10,5,0,48,50,3,12,6,0,49,46,1,0,0,0,49,47,1,0,0,0,49,
+		48,1,0,0,0,50,3,1,0,0,0,51,52,5,1,0,0,52,53,5,26,0,0,53,54,5,2,0,0,54,
+		55,3,6,3,0,55,56,5,3,0,0,56,5,1,0,0,0,57,58,3,8,4,0,58,59,5,4,0,0,59,61,
+		1,0,0,0,60,57,1,0,0,0,61,64,1,0,0,0,62,60,1,0,0,0,62,63,1,0,0,0,63,7,1,
+		0,0,0,64,62,1,0,0,0,65,66,5,5,0,0,66,67,5,26,0,0,67,68,5,6,0,0,68,69,3,
+		20,10,0,69,9,1,0,0,0,70,71,5,7,0,0,71,72,5,26,0,0,72,76,5,2,0,0,73,75,
+		3,12,6,0,74,73,1,0,0,0,75,78,1,0,0,0,76,74,1,0,0,0,76,77,1,0,0,0,77,79,
+		1,0,0,0,78,76,1,0,0,0,79,80,5,3,0,0,80,11,1,0,0,0,81,88,3,14,7,0,82,88,
+		3,28,14,0,83,88,3,32,16,0,84,88,3,34,17,0,85,88,3,36,18,0,86,88,3,38,19,
+		0,87,81,1,0,0,0,87,82,1,0,0,0,87,83,1,0,0,0,87,84,1,0,0,0,87,85,1,0,0,
+		0,87,86,1,0,0,0,88,13,1,0,0,0,89,92,5,26,0,0,90,91,5,8,0,0,91,93,5,26,
+		0,0,92,90,1,0,0,0,92,93,1,0,0,0,93,94,1,0,0,0,94,95,5,6,0,0,95,96,3,16,
+		8,0,96,97,5,4,0,0,97,15,1,0,0,0,98,104,3,20,10,0,99,100,3,24,12,0,100,
+		101,3,20,10,0,101,103,1,0,0,0,102,99,1,0,0,0,103,106,1,0,0,0,104,102,1,
+		0,0,0,104,105,1,0,0,0,105,17,1,0,0,0,106,104,1,0,0,0,107,111,3,16,8,0,
+		108,109,3,26,13,0,109,110,3,16,8,0,110,112,1,0,0,0,111,108,1,0,0,0,111,
+		112,1,0,0,0,112,19,1,0,0,0,113,119,5,28,0,0,114,119,5,27,0,0,115,119,5,
+		29,0,0,116,119,3,22,11,0,117,119,5,26,0,0,118,113,1,0,0,0,118,114,1,0,
+		0,0,118,115,1,0,0,0,118,116,1,0,0,0,118,117,1,0,0,0,119,21,1,0,0,0,120,
+		121,5,26,0,0,121,122,5,8,0,0,122,123,5,26,0,0,123,23,1,0,0,0,124,125,7,
+		0,0,0,125,25,1,0,0,0,126,127,7,1,0,0,127,27,1,0,0,0,128,129,5,19,0,0,129,
+		130,5,20,0,0,130,131,3,18,9,0,131,132,5,21,0,0,132,136,5,2,0,0,133,135,
+		3,12,6,0,134,133,1,0,0,0,135,138,1,0,0,0,136,134,1,0,0,0,136,137,1,0,0,
+		0,137,139,1,0,0,0,138,136,1,0,0,0,139,141,5,3,0,0,140,142,3,30,15,0,141,
+		140,1,0,0,0,141,142,1,0,0,0,142,29,1,0,0,0,143,144,5,22,0,0,144,148,5,
+		2,0,0,145,147,3,12,6,0,146,145,1,0,0,0,147,150,1,0,0,0,148,146,1,0,0,0,
+		148,149,1,0,0,0,149,151,1,0,0,0,150,148,1,0,0,0,151,152,5,3,0,0,152,31,
+		1,0,0,0,153,154,5,23,0,0,154,155,5,20,0,0,155,156,3,18,9,0,156,157,5,21,
+		0,0,157,161,5,2,0,0,158,160,3,12,6,0,159,158,1,0,0,0,160,163,1,0,0,0,161,
+		159,1,0,0,0,161,162,1,0,0,0,162,164,1,0,0,0,163,161,1,0,0,0,164,165,5,
+		3,0,0,165,33,1,0,0,0,166,167,5,24,0,0,167,168,5,20,0,0,168,169,3,16,8,
+		0,169,170,5,21,0,0,170,171,5,4,0,0,171,35,1,0,0,0,172,173,5,25,0,0,173,
+		174,5,20,0,0,174,175,5,26,0,0,175,176,5,21,0,0,176,177,5,4,0,0,177,37,
+		1,0,0,0,178,181,5,26,0,0,179,180,5,20,0,0,180,182,5,21,0,0,181,179,1,0,
+		0,0,181,182,1,0,0,0,182,183,1,0,0,0,183,184,5,4,0,0,184,39,1,0,0,0,14,
+		43,49,62,76,87,92,104,111,118,136,141,148,161,181
 	};
 
 	public static readonly ATN _ATN =

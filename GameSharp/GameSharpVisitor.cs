@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from d:/compilador/GameSharp.g4 by ANTLR 4.13.1
+// Generated from e:/WorkStation/compilador/GameSharp.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -62,18 +62,6 @@ public interface IGameSharpVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitPropertyDecl([NotNull] GameSharpParser.PropertyDeclContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GameSharpParser.eventHandler"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitEventHandler([NotNull] GameSharpParser.EventHandlerContext context);
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="GameSharpParser.eventType"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitEventType([NotNull] GameSharpParser.EventTypeContext context);
-	/// <summary>
 	/// Visit a parse tree produced by <see cref="GameSharpParser.actionDecl"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -92,64 +80,17 @@ public interface IGameSharpVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitAssignment([NotNull] GameSharpParser.AssignmentContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>Numero</c>
-	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.expr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitNumero([NotNull] GameSharpParser.NumeroContext context);
+	Result VisitExpr([NotNull] GameSharpParser.ExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>AddSub</c>
-	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
+	/// Visit a parse tree produced by <see cref="GameSharpParser.comp_expr"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitAddSub([NotNull] GameSharpParser.AddSubContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>Parentesis</c>
-	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitParentesis([NotNull] GameSharpParser.ParentesisContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>Identicador</c>
-	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitIdenticador([NotNull] GameSharpParser.IdenticadorContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>Multiplicacionydivision</c>
-	/// labeled alternative in <see cref="GameSharpParser.expr"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitMultiplicacionydivision([NotNull] GameSharpParser.MultiplicacionydivisionContext context);
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="GameSharpParser.ifStatement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitIfStatement([NotNull] GameSharpParser.IfStatementContext context);
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="GameSharpParser.whileStatement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitWhileStatement([NotNull] GameSharpParser.WhileStatementContext context);
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="GameSharpParser.functionCall"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitFunctionCall([NotNull] GameSharpParser.FunctionCallContext context);
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="GameSharpParser.exprList"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitExprList([NotNull] GameSharpParser.ExprListContext context);
+	Result VisitComp_expr([NotNull] GameSharpParser.Comp_exprContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="GameSharpParser.value"/>.
 	/// </summary>
@@ -157,9 +98,57 @@ public interface IGameSharpVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitValue([NotNull] GameSharpParser.ValueContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="GameSharpParser.objectProperty"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitObjectProperty([NotNull] GameSharpParser.ObjectPropertyContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GameSharpParser.op"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOp([NotNull] GameSharpParser.OpContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GameSharpParser.comp_op"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitComp_op([NotNull] GameSharpParser.Comp_opContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GameSharpParser.ifStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIfStatement([NotNull] GameSharpParser.IfStatementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GameSharpParser.elseStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitElseStatement([NotNull] GameSharpParser.ElseStatementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GameSharpParser.whileStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWhileStatement([NotNull] GameSharpParser.WhileStatementContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="GameSharpParser.printStatement"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitPrintStatement([NotNull] GameSharpParser.PrintStatementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GameSharpParser.readStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitReadStatement([NotNull] GameSharpParser.ReadStatementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="GameSharpParser.functionCall"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFunctionCall([NotNull] GameSharpParser.FunctionCallContext context);
 }
